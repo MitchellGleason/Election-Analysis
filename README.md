@@ -18,6 +18,10 @@
    - Raymon Anthony Doane received 3.1% of the vote and 11,606 votes
  - The winner of the election was:
    - Diana DeGette, who received 73.8% of the vote and 272,892 votes
+   
+ Shown in the file .txt as:
+ 
+ ![Capture](https://user-images.githubusercontent.com/111290810/188290899-1583f2d1-0735-4450-acf7-fdc990c44496.PNG)
 
 ## Election-Audit Summary
 The provided python script is certainly able to be used for any given election only if certain variables stay the same. The voter data must be provided in a .csv file format, and must contain the columns in this exact order: Ballot ID, County, Candidate. This is because the script uses the specific indexes of these columns, assuming that each column is static, as seen here:

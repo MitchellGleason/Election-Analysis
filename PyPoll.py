@@ -6,10 +6,8 @@
 #5. The winner of the election based on popular vote
 
 #Import dependencies
-from calendar import c
 import csv
 import os
-import winsound
 
 #Assign a variable to load the file from a path
 file_to_load = os.path.join("Resources", "election_results.csv")

@@ -21,7 +21,7 @@
 
 ## Election-Audit Summary
 The provided python script is certainly able to be used for any given election only if certain variables stay the same. The voter data must be provided in a .csv file format, and must contain the columns in this exact order: Ballot ID, County, Candidate. This is because the script uses the specific indexes of these columns, assuming that each column is static, as seen here:
-'''
+```
 /# For each row in the CSV file.
 for row in reader:
 
@@ -33,9 +33,9 @@ for row in reader:
 
    /# 3: Extract the county name from each row.
    county_name = row[1]
-'''
+```
 Additionally, the .csv must be in the same file directory as the script, and must be within a folder named 'Resources', and a folder named 'Analysis' must be created in the same file directory, as seen here:
-'''
+```
 /# Add our dependencies.
 import csv
 import os
@@ -44,7 +44,7 @@ import os
 file_to_load = os.path.join("Resources", "election_results.csv")
 /# Add a variable to save the file to a path.
 file_to_save = os.path.join("Analysis", "election_analysis.txt")
-'''
+```
 Modifications in this code can be made for a different file path and for a different column order in the .csv file.
 
 There are also further modifications and additions that can be made to this code to better suit other elections. The ballot IDs can be checked against a separate, more secure file, in order to ensure that they are all valid. The ballot IDs could also be checked against other IDs in this file to ensure there are no duplicates. Another addition could be the determination of the voter turnout (both total and per county) as a percentage of the total voter eligible population. Additionally, a section can be added to determine that number of votes that each candidate received in each county in order to better determine the candidates popularity in different areas.
